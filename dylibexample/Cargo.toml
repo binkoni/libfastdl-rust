@@ -1,0 +1,9 @@
+[package]
+name = "dylibexample"
+version = "0.1.0"
+authors = ["Byeonggon Lee <gonny952@gmail.com>"]
+
+[lib]
+crate-type = ["dylib"]
+
+[dependencies]

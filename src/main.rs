@@ -2,7 +2,7 @@ extern crate libloading as lib;
 use std::collections::HashMap;
 use std::mem::transmute;
 fn main() {
-    let lib = lib::Library::new("libembed.so").unwrap();
+    let lib = lib::Library::new("libdylibexample.so").unwrap();
     let mut fn_map: HashMap<&str, lib::Symbol<*const ()>> = HashMap::new();
     unsafe {
         let func: lib::Symbol<*const ()> = lib.get(b"test").unwrap();
