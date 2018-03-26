@@ -1,5 +1,5 @@
-extern crate libloading as lib;
 extern crate fastdl;
+
 fn main() {
     let mut lib = fastdl::Library::new("libdylibexample.so").unwrap();
     unsafe {

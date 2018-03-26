@@ -1,16 +1,14 @@
 extern crate libloading;
 use std::collections::HashMap;
 use std::mem::transmute;
-use std::ffi::OsStr;
 
 pub struct Library<'a> {
     lib: libloading::Library,
     fn_map: HashMap<&'a str, libloading::Symbol<'a, *const ()>>
 }
 
-
 impl<'a> Library<'a> {
-    pub fn new<P: AsRef<OsStr>>(filename: P) -> std::io::Result<Library<'a>> {
+    pub fn new(filename: &str) -> std::io::Result<Library<'a>> {
         Ok(Library {
             lib: libloading::Library::new(filename)?,
             fn_map: HashMap::new()
