@@ -7,7 +7,7 @@ authors = ["Byeonggon Lee <gonny952@gmail.com>"]
 libloading = "^0.5"
 
 [dev-dependencies]
-[dev-dependencies.dylibexample]
-path = "dylibexample"
+[dev-dependencies.dltest]
+path = "dltest"
 version = "^0.1.0"
 

@@ -1,5 +1,5 @@
 [package]
-name = "dylibexample"
+name = "dltest"
 version = "0.1.0"
 authors = ["Byeonggon Lee <gonny952@gmail.com>"]
 

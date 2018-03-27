@@ -1,4 +1,4 @@
 /target/
-/dylibexample/target/
+/dltest/target/
 **/*.rs.bk
 Cargo.lock
