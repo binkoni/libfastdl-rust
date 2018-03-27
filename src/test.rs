@@ -1,4 +1,4 @@
-#[cfg(test)]
+#![cfg(test)]
 #[test]
 fn test_success() {
     let mut lib = super::Library::new("libdltest.so").unwrap();
