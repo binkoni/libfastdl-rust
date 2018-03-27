@@ -1,6 +1,8 @@
 #![cfg(test)]
+
+use libloading;
 #[test]
-fn test_success() {
+fn success() {
     let mut lib = super::Library::new("libdltest.so").unwrap();
     unsafe {
         let test_fn = lib.get::<unsafe extern fn(i32) -> i32>("test").unwrap();
@@ -10,7 +12,7 @@ fn test_success() {
 
 #[test]
 #[should_panic]
-fn test_file_not_found() {
+fn file_not_found() {
     let mut lib = super::Library::new("libwhatever.so").unwrap();
     unsafe {
         let test_fn = lib.get::<unsafe extern fn(i32) -> i32>("test").unwrap();
@@ -20,10 +22,19 @@ fn test_file_not_found() {
 
 #[test]
 #[should_panic]
-fn test_symbol_not_found() {
+fn symbol_not_found() {
     let mut lib = super::Library::new("libdltest.so").unwrap();
     unsafe {
         let test_fn = lib.get::<unsafe extern fn(i32) -> i32>("whatever").unwrap();
+        assert!(test_fn(100) == 200);
+    }
+}
+
+#[test]
+fn libloading() {
+    let lib = libloading::Library::new("libdltest.so").unwrap();
+    unsafe {
+        let test_fn: libloading::Symbol<unsafe extern fn(i32) -> i32> = lib.get(b"test").unwrap();
         assert!(test_fn(100) == 200);
     }
 }
