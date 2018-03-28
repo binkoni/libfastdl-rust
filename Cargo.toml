@@ -9,8 +9,3 @@ repository = "https://github.com/gonapps/fastdl"
 
 [dependencies]
 libloading = "^0.5"
-
-[dev-dependencies.dltest]
-path = "dltest"
-version = "^0.1.0"
-
