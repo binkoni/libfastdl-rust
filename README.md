@@ -1,4 +1,4 @@
-fastdl
+libfastdl-rust
 =
 
 ## About
