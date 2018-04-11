@@ -1,6 +1,4 @@
-libfastdl-rust
-=
-
+# libfastdl-rust
 ## About
 A libloading wrapper library that caches function pointer to hash table
 ## Usage
