@@ -1,11 +1,11 @@
 [package]
 name = "libfastdl"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Byeonggon Lee <gonny952@gmail.com>"]
 description = "A libloading wrapper library that caches function pointer to hash table"
 keywords = ["libloading", "dlopen", "load", "shared", "dylib"]
 license = "MPL-2.0"
-repository = "https://github.com/gonapps/libfastdl-rust"
+repository = "https://github.com/binkoni/libfastdl-rust"
 
 [dependencies]
 libloading = "^0.5"
